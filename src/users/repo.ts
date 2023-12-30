@@ -8,7 +8,7 @@ interface CreateUserInput {
   password: string;
 }
 
-export async function createUser(input: CreateUserInput): Promise<User> {
+async function createUser(input: CreateUserInput): Promise<User> {
   return await db.user.create({
     data: {
       username: input.username,
@@ -29,7 +29,7 @@ interface UpdateUserInput {
   lastLogin?: Date;
 }
 
-export async function updateUser(
+async function updateUser(
   userId: string,
   input: UpdateUserInput,
 ): Promise<User> {
@@ -48,16 +48,22 @@ export async function updateUser(
   });
 }
 
-export async function getUserByUsername(
-  username: string,
-): Promise<User | null> {
+async function getUserByUsername(username: string): Promise<User | null> {
   return await db.user.findUnique({ where: { username } });
 }
 
-export async function getUserById(userId: string): Promise<User | null> {
+async function getUserById(userId: string): Promise<User | null> {
   return await db.user.findUnique({ where: { id: userId } });
 }
 
-export async function getUserByEmail(email: string): Promise<User | null> {
+async function getUserByEmail(email: string): Promise<User | null> {
   return await db.user.findUnique({ where: { email } });
 }
+
+export default {
+  createUser,
+  updateUser,
+  getUserByUsername,
+  getUserById,
+  getUserByEmail,
+};

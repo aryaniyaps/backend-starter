@@ -2,7 +2,7 @@ repo_name: aryaniyaps/backend-starter
 report_id: c8280a82638e96ce64f4bee8768a2ad5
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-20T08:13:15+00:00'
+timestamp: '2024-02-29T19:31:08+00:00'
 requested_by: aryaniyaps
 provider: github
 branch: master
@@ -107,7 +107,7 @@ tools:
   detection_source_url: https://github.com/aryaniyaps/backend-starter
   detection_source: Repo Metadata
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 3.1.1
   license: MIT
